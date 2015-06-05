@@ -1,22 +1,19 @@
 module View
   def welcome
-    puts "Welcome"
+    puts "Welcome to THE PRICE IS RIGHT!"
   end
 
   def instructions
-    puts "Instructions"
+    puts "We'll show an item, you guess the price!"
   end
 
   def display_item
     puts "Item"
   end
 
-  def display_contestant
+  def display
     puts "Contestant"
-  end
-
-  def display_bid
-    puts "Bid"
+    bids = Bid.pluck(:bid)
   end
 
   def display_winner
