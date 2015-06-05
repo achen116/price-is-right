@@ -7,13 +7,14 @@ class Controller
   end
 
   def run
-    puts @item
     case @command
       when "bid"
-        puts "Entered bid case!"
-        item = Item.create( { name: @item } )
+        item = Item.find_by(name: @item)
         new_contestant = Contestant.create( { name: @contestant })
         Bid.create({ bid: @bid, contestant_id: new_contestant.id, item_id: item.id })
+        View.entered_bid
+      when "display"
+        View.display_item
     end
   end
 end
