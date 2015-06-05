@@ -25,6 +25,8 @@ end
 
 require_relative '../app/controllers/priceisright_controller.rb'
 require_relative '../app/views/priceisright_view.rb'
+require_relative '../app/views/priceisright_welcome.rb'
+
 
 ActiveRecord::Base.establish_connection :adapter  => 'sqlite3',
                                         :database => DB_PATH
